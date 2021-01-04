@@ -1,8 +1,8 @@
-# Minhas práticas com formulários📚
+# Minhas práticas com formulários📚 My pratics with forms
 
-## Índice  🧾
+## Índice  🧾 header
 
- - Estilização de Formulários
- - Registrar dados 
- - Enviar dados ao banco de dados
- - Retornar dados aos resultados de pesquisa
+ - Estilização de Formulários | Styled forms
+ - Registrar dados | Register data
+ - Enviar dados ao banco de dados | Send data for Database
+ - Retornar dados aos resultados de pesquisa | Return data by search result.
