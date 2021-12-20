@@ -17,20 +17,19 @@
     <?php 
   
      if(isset($_POST['Enviar'])) {
-        //Extensões permitidas para upload
+        //Extensões permitdas para upload
         $formatosPermitidos = array("png", "jpeg", "jpg", "gif");
-       // Path info das extensões
+        //reconhecer e gravar a extensão do arquivo
         $extensao = pathinfo($_FILES['arquivo']['name'], PATHINFO_EXTENSION);
 
         if(in_array($extensao, $formatosPermitidos)) {
-          //Criando pasta para armazenar arquivo de upload
           $pasta = "arquivos/";
-          //Especificando
+          //Arquivo temporário e pegar o caminho dele
           $temporario = $_FILES['arquivo']['tmp_name'];
-          //Adicionando um novo nome e gravando sua extensão
+          //Concatenar com a extensão
           $novoNome = uniqid().".$extensao";
-          
-          //Se o upload for bem sucessido ou não
+
+          // Validação
           if(move_uploaded_file($temporario, $pasta.$novoNome)) {
             $mensagem = "Upload feito com sucesso!";
           } else {
@@ -65,5 +64,3 @@
     </section>
   </body>
 </html>
-
-
